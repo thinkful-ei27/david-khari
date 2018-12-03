@@ -42,3 +42,4 @@ function decode(inputWord) {
 
 }
 decode("cycle");
+ 
