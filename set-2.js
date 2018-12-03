@@ -11,7 +11,7 @@ console.log(jediName("David", "Johnson"));
 
 function beyond(num){
     
-    if (num>1.797693134862315E+308 || num<-1.797693134862315E+308){
+    if (num > Infinity || num< Infinity){
         console.log('And Beyond');}
     else if (num>0){
         console.log('To infinity');}
@@ -23,3 +23,22 @@ function beyond(num){
 
 
 beyond(5);
+
+function decode(inputWord) {
+
+    switch (inputWord.charAt(0)) {
+        case 'a':
+            return inputWord.charAt(1);
+        case 'b':
+            return inputWord.charAt(2);
+        case 'c':
+            return inputWord.charAt(3);
+        case 'd':
+            stringIndex = 4;
+            return inputWord.charAt(4);
+        default:
+            return " ";
+    }   
+
+}
+decode("cycle");
