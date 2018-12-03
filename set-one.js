@@ -1,4 +1,4 @@
-function createGreeting() {
+function createGreeting(name, age) {
     return 'Hi, my name is Khari';
 }
 
