@@ -47,6 +47,12 @@ function daysInMonth(month, leapYear){
     const input = month.toLowerCase();
     switch(input){
         case 'january':
+        case 'march':
+        case 'may':
+        case 'july':
+        case 'august':
+        case 'october':
+        case 'december':
             return 31;
             break;
         case 'febuary':
@@ -54,35 +60,11 @@ function daysInMonth(month, leapYear){
                 return 29;
             } else return 28;
             break;
-        case 'march':
-            return 31;
-            break;
         case 'april':
-            return 30;
-            break;
-        case 'may':
-            return 31;
-            break;
         case 'june':
-            return 30;
-            break;
-        case 'july':
-            return 31;
-            break;
-        case 'august':
-            return 31;
-            break;
         case 'september':
-            return 30;
-            break;
-        case 'october':
-            return 31;
-            break;
         case 'november':
             return 30;
-            break;
-        case 'december':
-            return 31;
             break;
         default:
             try{
