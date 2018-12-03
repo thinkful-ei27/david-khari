@@ -1,6 +1,10 @@
 function createGreeting(name, age) {
-    const yearOfBirth = getYearOfBirth(age);
-    return 'Hi, my name is Khari';
+    if (name !== undefined || age !== undefined) {
+        const yearOfBirth = getYearOfBirth(age);
+        return 'Hi, my name is Khari';
+    } else {
+        throw new Error("Arguments not valid")
+    }
 }
 
 function getYearOfBirth(age){
@@ -14,5 +18,5 @@ function getYearOfBirth(age){
     }
     return 2018 - age;
 }   
-const greeting1 = createGreeting();
+const greeting1 = createGreeting("David", 20);
 console.log(greeting1);
