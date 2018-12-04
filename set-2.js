@@ -54,18 +54,18 @@ function daysInMonth(month, leapYear){
         case 'october':
         case 'december':
             return 31;
-            break;
+
         case 'febuary':
             if(leapYear){
                 return 29;
             } else return 28;
-            break;
+
         case 'april':
         case 'june':
         case 'september':
         case 'november':
             return 30;
-            break;
+
         default:
             try{
               throw new Error('Must provide valid month');
@@ -75,3 +75,34 @@ function daysInMonth(month, leapYear){
     }
 }
 daysInMonth("January", false);
+
+function rockPaperScissor(num) {
+
+    const randomNo = Math.floor(Math.random() * 3) + 1;
+
+        if (num < 1 || num > 3) {
+            throw new Error("Must enter a number between 1 and 3.")
+        }
+
+        if ((num === 1 && randomNo === 1) 
+        || (num === 2 && randomNo === 2) 
+        || (num === 3 && randomNo === 3)) {
+
+            return "It's a tie!";
+        } 
+        else if 
+        ((num === 1 && randomNo === 3) 
+        || (num === 2 && randomNo === 1) 
+        || (num === 3 && randomNo === 2)) {
+
+            return "You win";
+        }
+        else if 
+        ((num === 3 && randomNo === 1) 
+        || (num === 1 && randomNo === 2) 
+        || (num === 2 && randomNo === 3)) {
+
+            return "The computer wins";
+        }
+    }
+rockPaperScissor(1);
